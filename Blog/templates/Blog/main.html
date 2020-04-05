@@ -1,0 +1,26 @@
+{%include 'Blog/template.html' %}
+{% block content %}
+{% load static %}
+    <!--Navbar-->
+<nav class="navbar navbar-light bg-light" style="text-align: center;justify-content: center;">
+  <span class="navbar-brand mb-0 h1">MyBlog</span>
+</nav>
+      
+      <div class="container">
+        {%for post in posts%}
+        <div class="blog" style="background-color:#DADADE;"><a href="{% url 'detail_page' post.id %}">
+          <div class="blog-title" style="padding:5px;color: black">
+            <h3>{{post.title}}</h3>
+            <h5 class="creator">{{post.creator}}</h5>
+            <span class="date"> {{post.created_date}}</span>
+            </div>
+            <div class="image">
+              <img class="blog-img" src="{{post.image.url}}" alt="">
+            </div>
+            <div class="blog_content" style="padding:5px;color:black;background-color: #DADADE;">
+              <p class="text">{{post.subtitle}}</p>
+            </div>
+        </a></div>
+      {%endfor%}
+      </div>
+{%endblock%}
