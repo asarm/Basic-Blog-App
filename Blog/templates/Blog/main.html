@@ -1,26 +1,75 @@
-{%include 'Blog/template.html' %}
-{% block content %}
-{% load static %}
-    <!--Navbar-->
-<nav class="navbar navbar-light bg-light" style="text-align: center;justify-content: center;">
-  <span class="navbar-brand mb-0 h1">MyBlog</span>
-</nav>
-      
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="C:\Users\ardaa_iyfsapc\Desktop\JavaScript\Blog\style.css">
+    <link rel="stylesheet" href="'https://fonts.googleapis.com/css2?family=Oswald&display=swap'">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="header">
+      <h3>My Blog</h3>
+    </div>
+    <!--Main-->
       <div class="container">
-        {%for post in posts%}
-        <div class="blog" style="background-color:#DADADE;"><a href="{% url 'detail_page' post.id %}">
-          <div class="blog-title" style="padding:5px;color: black">
-            <h3>{{post.title}}</h3>
-            <h5 class="creator">{{post.creator}}</h5>
-            <span class="date"> {{post.created_date}}</span>
+        <div class="blog">
+          <div class="blog-title" style="padding:5px;">
+            <h3>Blog Title</h3>
             </div>
             <div class="image">
-              <img class="blog-img" src="{{post.image.url}}" alt="">
+              <img class="blog-img" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="">
             </div>
-            <div class="blog_content" style="padding:5px;color:black;background-color: #DADADE;">
-              <p class="text">{{post.subtitle}}</p>
+            <div class="blog_content" style="padding:5px;">
+              <p class="text">That's our first content!! We are proud of this!</p>
+              <hr>
+              <class="creator">Author
+              <span class="date">Date</span>
             </div>
-        </a></div>
-      {%endfor%}
+        </div>
+        <div class="blog">
+          <div class="blog-title" style="padding:5px;">
+            <h3>Blog Title</h3>
+            </div>
+            <div class="image">
+              <img class="blog-img" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="">
+            </div>
+            <div class="blog_content" style="padding:5px;">
+              <p class="text">That's our first content!! We are proud of this!</p>
+              <hr>
+              <class="creator">Author
+              <span class="date">Date</span>
+            </div>
       </div>
-{%endblock%}
+</div>
+      <!--NavBar-->
+      <div class="navbar">
+        <div class="profilePic">
+          <img src="MyBlog\profil.jpeg" alt="">
+          <p><center>This blog was made by Mert Arda Asar</center></p>
+        </div>
+        <div class="social" style="margin-top:2%">
+          <b>Follow Me</b>
+          <ul>
+            <li><a href="https://github.com/asarm" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/mert-arda-asar-9b4b14168/" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <br>
+        <div class="quote">
+          <b>Quote of the Week</b>
+          <blockquote><p>"Your greatest dreams are all on the other side of the wall of fear and caution."</p></blockquote></div>
+
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
